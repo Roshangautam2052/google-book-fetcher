@@ -13,7 +13,8 @@ import play.api.test._
  *
  * For more information, see https://www.playframework.com/documentation/latest/ScalaTestingWithScalaTest
  */
-class HomeControllerSpec extends BaseSpec with Injecting with GuiceOneAppPerSuite {
+class
+HomeControllerSpec extends BaseSpec with Injecting with GuiceOneAppPerSuite {
 
   val controllerComponents: ControllerComponents = Helpers.stubControllerComponents()
 
@@ -25,7 +26,7 @@ class HomeControllerSpec extends BaseSpec with Injecting with GuiceOneAppPerSuit
 
       status(home) mustBe OK
       contentType(home) mustBe Some("text/html")
-      contentAsString(home) must include ("Welcome to Play")
+      contentAsString(home) must include ("Google Book fetcher")
     }
 
     "render the index page from the application" in {
@@ -34,7 +35,7 @@ class HomeControllerSpec extends BaseSpec with Injecting with GuiceOneAppPerSuit
 
       status(home) mustBe OK
       contentType(home) mustBe Some("text/html")
-      contentAsString(home) must include ("Welcome to Play")
+      contentAsString(home) must include ("Google Book fetcher")
     }
 
     "render the index page from the router" in {
@@ -43,7 +44,7 @@ class HomeControllerSpec extends BaseSpec with Injecting with GuiceOneAppPerSuit
 
       status(home) mustBe OK
       contentType(home) mustBe Some("text/html")
-      contentAsString(home) must include ("Welcome to Play")
+      contentAsString(home) must include ("Google Book fetcher")
     }
   }
 }
